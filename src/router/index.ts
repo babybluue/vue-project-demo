@@ -3,7 +3,7 @@ const routes: RouterOptions['routes'] = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('../App.vue'),
+    component: () => import('../pages/Home.vue'),
   },
   {
     path: '/one',
