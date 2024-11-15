@@ -9,8 +9,9 @@ const app = createApp(App)
 app.use(router)
 app.use(
   VueGtag,
+
   {
-    config: { id: 'GTM-M7X45V9S' },
+    config: { id: 'G-74YBHS0K3B' },
   },
   router
 )
