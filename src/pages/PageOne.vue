@@ -68,17 +68,26 @@
 
   const handleSubmitGender = () => {
     console.log('gender', gender.value)
-    event('gender_submitted', { value: gender.value })
+    event('gender_submitted', {
+      event_category: 'form_submission',
+      value: gender.value,
+    })
   }
 
   const handleSubmitName = () => {
     console.log('name', name.value)
-    event('name_submitted', { value: name.value })
+    event('name_submitted', {
+      event_category: 'form_submission',
+      value: name.value,
+    })
   }
 
   const handleSubmitJob = () => {
     console.log('job', job.value)
-    event('job_submitted', { value: job.value })
+    event('job_submitted', {
+      event_category: 'form_submission',
+      value: job.value,
+    })
   }
 </script>
 <style scoped>
