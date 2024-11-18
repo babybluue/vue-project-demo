@@ -1,7 +1,8 @@
 <script setup lang="ts">
-  import { useRouter } from 'vue-router'
+  import { useRoute, useRouter } from 'vue-router'
 
   const router = useRouter()
+  const route = useRoute()
 
   const links = [
     {
@@ -30,7 +31,7 @@
         <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
       </a>
     </div>
-    <div class="flex justify-center gap-[10px]">
+    <div class="flex justify-center gap-[10px] py-[20px]">
       <span
         v-for="item in links"
         :key="item.name"
@@ -39,7 +40,10 @@
         >{{ item.name }}</span
       >
     </div>
-    <div class="bg-yellow-200 flex-1">
+    <div
+      class="bg-yellow-200 flex-1 flex justify-center py-[100px]"
+      :class="route.meta.bg"
+    >
       <router-view></router-view>
     </div>
   </div>
