@@ -3,7 +3,7 @@ const routes: RouterOptions['routes'] = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('../pages/Home.vue'),
+    component: () => import('@/modules/RouterExample/Home.vue'),
     meta: {
       bg: 'bg-blue-300',
     },
@@ -11,7 +11,7 @@ const routes: RouterOptions['routes'] = [
   {
     path: '/one',
     name: 'OnePage',
-    component: () => import('../pages/PageOne.vue'),
+    component: () => import('@/modules/RouterExample/PageOne.vue'),
     meta: {
       bg: 'bg-green-300',
     },
@@ -19,7 +19,7 @@ const routes: RouterOptions['routes'] = [
   {
     path: '/two',
     name: 'TwoPage',
-    component: () => import('../pages/PageTwo.vue'),
+    component: () => import('@/modules/RouterExample/PageTwo.vue'),
     meta: {
       bg: 'bg-yellow-300',
     },
@@ -27,10 +27,15 @@ const routes: RouterOptions['routes'] = [
   {
     path: '/three',
     name: 'ThreePage',
-    component: () => import('../pages/PageThree.vue'),
+    component: () => import('@/modules/RouterExample/PageThree.vue'),
     meta: {
       bg: 'bg-slate-300',
     },
+  },
+  {
+    path: '/drag',
+    name: 'DragPage',
+    component: () => import('@/modules/DragExample/pages/Index.vue'),
   },
 ]
 
